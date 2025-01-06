@@ -3,7 +3,7 @@ import StarIc from '@/public/icons/star.svg';
 
 const WhoWeAre = () => {
   return (
-    <section id="who-we-are" className="pb-40 container !px-0 lg:px-4">
+    <section id="who-we-are" className="pt-32 md:pt-36 container !px-0 lg:px-4">
       <div className="py-12 rounded-[4px] bg-dark-grey flex flex-wrap gap-y-24">
         <div className="px-4 md:px-8 lg:px-16 basis-[240px] flex-grow flex flex-col justify-between gap-y-12 lg:gap-y-20">
           <div className="space-y-6 lg:space-y-10">

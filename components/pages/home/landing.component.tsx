@@ -7,17 +7,17 @@ import { useInView } from 'react-intersection-observer';
 
 const Landing = () => {
   const router = useRouter();
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-  });
-
-  console.log(inView);
+  const [ref, inView] = useInView({ rootMargin: '-50% 0% -50% 0%' });
 
   useEffect(() => {
     if (inView)
-      router.push({
-        hash: '#landing',
-      });
+      router.push(
+        {
+          hash: '#landing',
+        },
+        undefined,
+        { scroll: false, shallow: true },
+      );
   }, [inView]);
 
   return (

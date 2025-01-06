@@ -13,6 +13,9 @@ export default {
         dark: '#0F0F0F',
         'dark-grey': '#1A1C1D',
         grey: '#828384',
+        'med-grey': '#262A2C',
+        'med-yellow': '#E7A806',
+        'dark-yellow': '#8F6700',
       },
       animation: {
         marquee: 'marquee 25s linear infinite',

@@ -3,7 +3,7 @@ import DummyClient from '@/public/images/client.png';
 
 const Clients = () => {
   return (
-    <section id="clients" className="py-32 md:py-40">
+    <section id="clients" className="pt-32 md:pt-36">
       <div className="relative overflow-x-hidden">
         <div className="inline-flex animate-marquee">
           {Array.from({ length: 5 }).map((_, idx) => (
@@ -20,7 +20,7 @@ const Clients = () => {
             </div>
           ))}
         </div>
-        <div className="absolute top-0 animate-marquee2 inline-flex">
+        <div className="absolute left-0 top-0 animate-marquee2 inline-flex">
           {Array.from({ length: 5 }).map((_, idx) => (
             <div key={idx} className="flex items-center gap-5 ml-10 md:ml-24">
               <Image

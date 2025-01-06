@@ -4,6 +4,8 @@ import HamburgerIc from '@/public/icons/hamburger.svg';
 import CloseIc from '@/public/icons/close.svg';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import useScroll from '@/libs/hooks/use-scroll.hook';
 
 const IS_SERVER = typeof window === 'undefined';
 
@@ -16,17 +18,22 @@ const MENUS = [
 ];
 
 const Navbar = () => {
+  const router = useRouter();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const { isScrolling } = useScroll();
+
+  const sectionId = `#${router.asPath.split('#')[1] || 'landing'}`;
 
   return (
-    <header className="fixed z-50 w-full">
+    <header
+      className={`fixed z-50 w-full transition-all ${isScrolling ? '!invisible opacity-0' : '!visible opacity-100'}`}
+    >
       <div className="container py-10 flex items-center justify-between">
         <Image src={Logo} width={33} alt="Merantau Mandiri" priority />
         <nav className="hidden md:block">
           <ul className="flex items-center gap-10">
             {MENUS.map((menu) => {
-              console.log(IS_SERVER);
-              const isActive = !IS_SERVER && window.location.hash === menu.link;
+              const isActive = sectionId === menu.link;
 
               return (
                 <li key={menu.label}>

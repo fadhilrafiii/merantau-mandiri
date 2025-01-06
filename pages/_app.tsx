@@ -3,6 +3,8 @@ import '@/styles/globals.css';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 
+import 'swiper/css';
+
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
