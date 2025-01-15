@@ -3,6 +3,7 @@ import { ButtonHTMLAttributes } from 'react';
 enum ButtonVariant {
   PrimaryFilled,
   PrimaryOutlined,
+  SecondaryFilled,
 }
 
 interface IProps extends ButtonHTMLAttributes<HTMLButtonElement> {
@@ -14,6 +15,8 @@ const getClassName = (variant: ButtonVariant) => {
     return 'text-black bg-yellow border border-yellow';
   if (variant === ButtonVariant.PrimaryOutlined)
     return 'text-yellow bg-transparent border border-yellow';
+  if (variant === ButtonVariant.SecondaryFilled)
+    return 'text-black bg-white border border-white';
 };
 
 const Button = ({ variant, className, children, ...props }: IProps) => {

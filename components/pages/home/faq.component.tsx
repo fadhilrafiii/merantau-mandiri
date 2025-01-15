@@ -47,7 +47,9 @@ const Faq = () => {
     if (inView)
       router.push(
         {
-          hash: '#faq',
+          query: {
+            section: 'faq',
+          },
         },
         undefined,
         { scroll: false, shallow: true },

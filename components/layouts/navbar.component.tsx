@@ -22,7 +22,19 @@ const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const { isScrolling } = useScroll();
 
-  const sectionId = `#${router.asPath.split('#')[1] || 'landing'}`;
+  const sectionId = router.query.section;
+
+  const onClickMenu = (id: string) => {
+    router.push(
+      {
+        query: {
+          section: id,
+        },
+      },
+      undefined,
+      { scroll: false, shallow: true },
+    );
+  };
 
   return (
     <header
@@ -33,13 +45,14 @@ const Navbar = () => {
         <nav className="hidden md:block">
           <ul className="flex items-center gap-10">
             {MENUS.map((menu) => {
-              const isActive = sectionId === menu.link;
+              const isActive = sectionId === menu.link.slice(1);
 
               return (
                 <li key={menu.label}>
                   <Link
                     href={menu.link}
                     className={`text-white text-lg ${isActive && 'text-yellow underline font-medium'}`}
+                    onClick={() => onClickMenu(menu.link.slice(1))}
                   >
                     {menu.label}
                   </Link>
@@ -66,13 +79,14 @@ const Navbar = () => {
             <nav>
               <ul className="flex flex-col justify-center items-center gap-10">
                 {MENUS.map((menu) => {
-                  const isActive = window.location.hash === menu.link;
+                  const isActive = router.query.section === menu.link.slice(1);
 
                   return (
                     <li key={menu.label}>
                       <Link
                         href={menu.link}
                         className={`text-white text-lg ${isActive && 'text-yellow underline font-medium'}`}
+                        onClick={() => onClickMenu(menu.link.slice(1))}
                       >
                         {menu.label}
                       </Link>

@@ -41,7 +41,9 @@ const Review = () => {
     if (inView)
       router.push(
         {
-          hash: '#review',
+          query: {
+            section: 'review',
+          },
         },
         undefined,
         { scroll: false },

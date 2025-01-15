@@ -13,7 +13,9 @@ const Landing = () => {
     if (inView)
       router.push(
         {
-          hash: '#landing',
+          query: {
+            section: 'landing',
+          },
         },
         undefined,
         { scroll: false, shallow: true },

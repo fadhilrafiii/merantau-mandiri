@@ -15,7 +15,9 @@ const WhyUs = () => {
     if (inView)
       router.push(
         {
-          hash: '#why-us',
+          query: {
+            section: 'why-us',
+          },
         },
         undefined,
         { scroll: false, shallow: true },

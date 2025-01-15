@@ -1,4 +1,3 @@
-import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import MinyakImg from '@/public/images/minyak.png';
@@ -30,7 +29,9 @@ const Product = () => {
     if (inView)
       router.push(
         {
-          hash: '#product',
+          query: {
+            section: 'product',
+          },
         },
         undefined,
         { scroll: false, shallow: true },
@@ -53,6 +54,7 @@ const Product = () => {
           <button
             className="rounded-[4px] bg-dark-grey w-11 h-11 flex items-center justify-center"
             onClick={() => swiper?.slideNext()}
+            disabled={swiper?.allowSlideNext}
           >
             <Image src={NextIc} alt="next" height={16} />
           </button>

@@ -4,6 +4,7 @@ import Faq from '@/components/pages/home/faq.component';
 import Landing from '@/components/pages/home/landing.component';
 import OrderStep from '@/components/pages/home/order-step.component';
 import Product from '@/components/pages/home/product.component';
+import Project from '@/components/pages/home/project.component';
 import Review from '@/components/pages/home/review.component';
 import Service from '@/components/pages/home/service.component';
 import WhoWeAre from '@/components/pages/home/who-we-are.component';
@@ -19,6 +20,7 @@ export default function Home() {
       <Product />
       <OrderStep />
       <Service />
+      <Project />
       <Review />
       <Faq />
       <Footer />
