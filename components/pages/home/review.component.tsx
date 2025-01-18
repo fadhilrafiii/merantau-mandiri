@@ -57,10 +57,18 @@ const Review = () => {
           Pesan <span className="hidden md:inline">hangat dari</span> mereka
         </h3>
         <div className="inline-flex items-center gap-4">
-          <button onClick={() => swiper?.slidePrev()}>
+          <button
+            onClick={() => swiper?.slidePrev()}
+            disabled={!swiper?.allowSlidePrev}
+            className="disabled:cursor-[not-allowed]"
+          >
             <Image src={PrevIc} alt="prev" height={40} />
           </button>
-          <button onClick={() => swiper?.slideNext()}>
+          <button
+            onClick={() => swiper?.slideNext()}
+            disabled={!swiper?.allowSlideNext}
+            className="disabled:cursor-[not-allowed]"
+          >
             <Image src={NextIc} alt="next" height={40} />
           </button>
         </div>

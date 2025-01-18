@@ -38,7 +38,7 @@ const Landing = () => {
       <div className="space-y-20 min-h-[720px] h-[calc(100vh-40px)] flex flex-col justify-center items-start backdrop-blur-sm">
         <div className="container space-y-8">
           <h1 className="font-semibold text-white lg:text-6xl text-4xl leading-tight">
-            Saya sedang <br /> mencari <span className="text-yellow">beras</span>
+            Saya sedang <br /> mencari <span className="text-yellow typewriter"></span>
           </h1>
           <p className="text-white text-xl">
             Kami menyediakan kebutuhan sehari-hari,

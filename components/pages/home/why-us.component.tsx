@@ -32,19 +32,27 @@ const WhyUs = () => {
         </h3>
         <div className="flex flex-col gap-5">
           <div className="flex flex-wrap -mx-[10px] gap-y-5">
-            <div className="px-[10px] basis-[340px] flex-grow ">
-              <div className="flex-grow rounded-[4px] bg-dark-grey flex flex-col gap-8 lg:p-16 px-4 py-8">
-                <div className="lg:text-[52px] text-yellow text-[40px]">01</div>
-                <div className="lg:text-[40px] text-white font-semibold text-xl">
-                  Proses mudah dan cepat
-                </div>
-                <div className="lg:text-xl text-base text-grey">
-                  Pemesanan yang mudah dan praktis, hanya melalui ponsel anda. Kapanpun,
-                  dimanapun.
+            <div className="relative px-[10px] basis-[340px] flex-grow">
+              <div className="z-10 relative flex-grow rounded-[4px] bg-dark-grey overflow-hidden h-full">
+                <Image
+                  src={Why1}
+                  alt="mengapa merantau mandiri 1"
+                  fill
+                  className="-z-10 absolute w-full h-full object-cover blur-sm md:hidden"
+                />
+                <div className="flex flex-col gap-4 pt-28 md:pt-16 pb-10 md:pb-16 px-4 md:px-6 xl:px-16 justify-end h-full why-us-box md:bg-none">
+                  <div className="lg:text-[52px] text-yellow text-[40px]">01</div>
+                  <div className="lg:text-[40px] text-white font-semibold text-xl">
+                    Proses mudah dan cepat
+                  </div>
+                  <div className="lg:text-xl text-base text-grey tracking-tight">
+                    Pemesanan yang mudah dan praktis, hanya melalui ponsel anda. Kapanpun,
+                    dimanapun.
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="px-[10px] basis-[340px] flex-grow">
+            <div className="px-[10px] basis-[340px] flex-grow hidden md:block">
               <div className="relative h-full flex-grow rounded-[4px] bg-dark-grey">
                 <Image
                   src={Why1}
@@ -56,47 +64,63 @@ const WhyUs = () => {
             </div>
           </div>
           <div className="flex flex-wrap-reverse -mx-[10px] gap-y-5">
-            <div className="px-[10px] basis-[340px] flex-grow">
-              <div className="relative h-full  flex-grow rounded-[4px] bg-dark-grey">
+            <div className="px-[10px] basis-[340px] flex-grow hidden md:block">
+              <div className="relative h-full flex-grow rounded-[4px] bg-dark-grey">
                 <Image
                   src={Why2}
-                  alt="mengapa merantau mandiri 1"
+                  alt="mengapa merantau mandiri 2"
                   width={400}
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-            <div className="px-[10px] basis-[340px] flex-grow">
-              <div className=" flex-grow rounded-[4px] bg-dark-grey flex flex-col gap-8 lg:p-16 px-4 py-8">
-                <div className="lg:text-[52px] text-yellow text-[40px]">02</div>
-                <div className="lg:text-[40px] text-white font-semibold text-xl">
-                  Terpercaya menjadi mitra anda{' '}
-                </div>
-                <div className="lg:text-xl text-grey text-base">
-                  Menjaga kepercayaan pengguna adalah kunci sukses kami dalam menjalankan
-                  bisnis.
+            <div className="relative px-[10px] basis-[340px] flex-grow">
+              <div className="z-10 relative flex-grow rounded-[4px] bg-dark-grey overflow-hidden h-full">
+                <Image
+                  src={Why2}
+                  alt="mengapa merantau mandiri 2"
+                  fill
+                  className="-z-10 absolute w-full h-full object-cover blur-sm md:hidden"
+                />
+                <div className="flex flex-col gap-4 pt-28 md:pt-16 pb-10 md:pb-16 px-4 md:px-6 xl:px-16 md:px-6 xl:px-16 justify-end h-full why-us-box md:bg-none">
+                  <div className="lg:text-[52px] text-yellow text-[40px]">02</div>
+                  <div className="lg:text-[40px] text-white font-semibold text-xl">
+                    Terpercaya menjadi mitra anda{' '}
+                  </div>
+                  <div className="lg:text-xl text-base text-grey tracking-tight">
+                    Menjaga kepercayaan pengguna adalah kunci sukses kami dalam
+                    menjalankan bisnis.
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="flex flex-wrap -mx-[10px] gap-y-5">
-            <div className="px-[10px] basis-[340px] flex-grow">
-              <div className=" flex-grow rounded-[4px] bg-dark-grey flex flex-col gap-8 lg:p-16 px-4 py-8">
-                <div className="lg:text-[52px] text-yellow text-[40px]">03</div>
-                <div className="lg:text-[40px] text-white font-semibold text-xl">
-                  Garansi produk berkualitas
-                </div>
-                <div className="lg:text-xl text-grey text-base">
-                  Jaminan produk terbaik sampai ke tnagan anda. Seluruh barang melalui
-                  quality control sebelum pengiriman.
+            <div className="relative px-[10px] basis-[340px] flex-grow">
+              <div className="z-10 relative flex-grow rounded-[4px] bg-dark-grey overflow-hidden h-full">
+                <Image
+                  src={Why3}
+                  alt="mengapa merantau mandiri 3"
+                  fill
+                  className="-z-10 absolute w-full h-full object-cover blur-sm md:hidden"
+                />
+                <div className="flex flex-col gap-4 pt-28 md:pt-16 pb-10 md:pb-16 px-4 md:px-6 xl:px-16 justify-end h-full why-us-box md:bg-none">
+                  <div className="lg:text-[52px] text-yellow text-[40px]">03</div>
+                  <div className="lg:text-[40px] text-white font-semibold text-xl">
+                    Garansi produk berkualitas{' '}
+                  </div>
+                  <div className="lg:text-xl text-base text-grey tracking-tight">
+                    Jaminan produk terbaik sampai ke tangan anda. Seluruh barang melalui
+                    quality control sebelum pengiriman.
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="px-[10px] basis-[340px] flex-grow">
-              <div className="relative h-full  flex-grow rounded-[4px] bg-dark-grey">
+            <div className="px-[10px] basis-[340px] flex-grow hidden md:block">
+              <div className="relative h-full flex-grow rounded-[4px] bg-dark-grey">
                 <Image
                   src={Why3}
-                  alt="mengapa merantau mandiri 1"
+                  alt="mengapa merantau mandiri 3"
                   width={400}
                   className="w-full h-full object-cover"
                 />

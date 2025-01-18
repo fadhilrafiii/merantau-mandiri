@@ -3,11 +3,9 @@ import Logo from '@/public/images/logo.png';
 import HamburgerIc from '@/public/icons/hamburger.svg';
 import CloseIc from '@/public/icons/close.svg';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import useScroll from '@/libs/hooks/use-scroll.hook';
-
-const IS_SERVER = typeof window === 'undefined';
 
 const MENUS = [
   { label: 'Beranda', link: '#landing' },
@@ -20,7 +18,8 @@ const MENUS = [
 const Navbar = () => {
   const router = useRouter();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  const { isScrolling } = useScroll();
+  const { scroll, isScrolling } = useScroll();
+  const [windowHeight, setWindowHeight] = useState(0);
 
   const sectionId = router.query.section;
 
@@ -36,11 +35,17 @@ const Navbar = () => {
     );
   };
 
+  useEffect(() => {
+    setWindowHeight(window.innerHeight);
+  }, [showMobileMenu]);
+
+  console.log(isScrolling);
+
   return (
     <header
-      className={`fixed z-50 w-full transition-all ${isScrolling ? '!invisible opacity-0' : '!visible opacity-100'}`}
+      className={`fixed z-50 w-full transition-all ${scroll > windowHeight && 'bg-dark bg-opacity-80'} ${isScrolling ? '!invisible opacity-0' : '!visible opacity-100'}`}
     >
-      <div className="container py-10 flex items-center justify-between">
+      <div className="container py-6 flex items-center justify-between">
         <Image src={Logo} width={33} alt="Merantau Mandiri" priority />
         <nav className="hidden md:block">
           <ul className="flex items-center gap-10">
@@ -86,7 +91,10 @@ const Navbar = () => {
                       <Link
                         href={menu.link}
                         className={`text-white text-lg ${isActive && 'text-yellow underline font-medium'}`}
-                        onClick={() => onClickMenu(menu.link.slice(1))}
+                        onClick={() => {
+                          onClickMenu(menu.link.slice(1));
+                          setShowMobileMenu(false);
+                        }}
                       >
                         {menu.label}
                       </Link>

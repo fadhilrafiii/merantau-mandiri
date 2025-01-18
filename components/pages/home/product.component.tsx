@@ -48,13 +48,14 @@ const Product = () => {
           <button
             className="rounded-[4px] bg-dark-grey w-11 h-11 flex items-center justify-center"
             onClick={() => swiper?.slidePrev()}
+            disabled={!swiper?.allowSlidePrev}
           >
             <Image src={PrevIc} alt="prev" height={16} />
           </button>
           <button
             className="rounded-[4px] bg-dark-grey w-11 h-11 flex items-center justify-center"
             onClick={() => swiper?.slideNext()}
-            disabled={swiper?.allowSlideNext}
+            disabled={!swiper?.allowSlideNext}
           >
             <Image src={NextIc} alt="next" height={16} />
           </button>

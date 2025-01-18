@@ -1,5 +1,5 @@
 import Navbar from '@/components/layouts/navbar.component';
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 import type { AppProps } from 'next/app';
 import { Inter } from 'next/font/google';
 

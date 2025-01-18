@@ -73,6 +73,9 @@ const Faq = () => {
               <div className="space-y-3 md:space-y-6 flex-grow">
                 <div
                   className={`text-white text-sm md:text-2xl ${active === i && 'text-yellow'}`}
+                  role="button"
+                  aria-label="question"
+                  onClick={() => setActive(active === i ? null : i)}
                 >
                   {f.question}
                 </div>

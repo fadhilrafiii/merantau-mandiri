@@ -2,26 +2,34 @@ import { useEffect, useState } from 'react';
 import { debounce } from 'lodash';
 
 const useScroll = () => {
+  const [scroll, setScroll] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
 
   useEffect(() => {
-    const handleScrollStop = () => {
-      setIsScrolling(true);
-
+    const handleScroll = () => {
       debounce(() => {
-        setIsScrolling(false);
-      }, 1000)();
+        console.log('scrolling right now');
+        if (!isScrolling) setIsScrolling(true);
+      })();
+      setScroll(window.scrollY);
     };
 
-    window.addEventListener('scroll', handleScrollStop);
+    const handleStopScroll = () => {
+      setIsScrolling(false);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scrollend', handleStopScroll);
 
     // cleanup function
     return () => {
-      window.removeEventListener('scroll', handleScrollStop);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scrollend', handleStopScroll);
     };
   }, []);
 
   return {
+    scroll,
     isScrolling,
   };
 };

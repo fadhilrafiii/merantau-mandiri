@@ -1,3 +1,5 @@
+@import './typed.scss';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -39,4 +41,30 @@ html {
   .container {
     max-width: 1200px;
   }
+}
+
+.typewriter {
+  @include typed(
+    'beras',
+    'minyak',
+    'mie instan',
+    (
+      type: 0.05,
+      pause-typed: 1,
+    ),
+    (
+      caret-width: 2px,
+      caret-speed: 0.5,
+    )
+  );
+}
+
+.why-us-box {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.05) 36.73%,
+      rgba(0, 0, 0, 0.55) 62.19%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
 }

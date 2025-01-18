@@ -23,6 +23,7 @@ const PROJECTS = [
 const Project = () => {
   const [firstSwiper, setFirstSwiper] = useState<ISwiper>();
   const [secondSwiper, setSecondSwiper] = useState<ISwiper>();
+  const [mobileSwiper, setMobileSwiper] = useState<ISwiper>();
   const router = useRouter();
   const [ref, inView] = useInView({ rootMargin: '-50% 0% -50% 0%' });
 
@@ -45,11 +46,13 @@ const Project = () => {
   const handlePrev = () => {
     firstSwiper?.slidePrev();
     secondSwiper?.slidePrev();
+    mobileSwiper?.slidePrev();
   };
 
   const handleNext = () => {
     firstSwiper?.slideNext();
     secondSwiper?.slideNext();
+    mobileSwiper?.slideNext();
   };
 
   return (
@@ -77,51 +80,72 @@ const Project = () => {
               </button>
             </div>
           </div>
-          <div className="min-w-[240px] aspect-square md:aspect-[none] basis-[calc(calc(100%-20px)/3)] flex-grow  rounded-[4px] overflow-hidden">
-            <Swiper
-              onSwiper={(swiper: ISwiper) => setFirstSwiper(swiper)}
-              spaceBetween={16}
-              className="!h-full"
-              loop
-              slidesPerView={1}
-            >
-              {firstSwiperProjects.map((p, idx) => (
-                <SwiperSlide key={idx} className="h-auto">
-                  <div className="relative h-full">
-                    <Image src={p.image} alt={p.title} fill className="object-cover" />
-                    <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-opacity-30 bg-black">
-                      <div className="font-medium text-white text-3xl">{p.title}</div>
-                      <p className="text-white">{p.desc}</p>
+          <div className="relative flex flex-wrap lg:w-[calc(calc(100%-20px)*2/3)] basis-[calc(2*calc(100%-20px)/3)] gap-5">
+            <div className="min-w-[240px] aspect-square md:aspect-[none] basis-[calc(calc(100%-20px)/3)] flex-grow  rounded-[4px] overflow-hidden">
+              <Swiper
+                onSwiper={(swiper: ISwiper) => setMobileSwiper(swiper)}
+                spaceBetween={16}
+                className="!h-full md:!hidden max-w-full"
+                loop
+                slidesPerView={1.1}
+              >
+                {PROJECTS.map((p, idx) => (
+                  <SwiperSlide key={idx} className="h-auto">
+                    <div className="relative h-full">
+                      <Image src={p.image} alt={p.title} fill className="object-cover" />
+                      <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-opacity-30 bg-black">
+                        <div className="font-medium text-white text-3xl">{p.title}</div>
+                        <p className="text-white">{p.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-          <div className="min-w-[240px] aspect-square md:aspect-[none] basis-[calc(calc(100%-20px)/3)] flex-grow  rounded-[4px] overflow-hidden">
-            <Swiper
-              className="!h-full"
-              onSwiper={(swiper: ISwiper) => setSecondSwiper(swiper)}
-              spaceBetween={16}
-              loop
-              slidesPerView={1}
-            >
-              {secondSwiperProjects.map((p, idx) => (
-                <SwiperSlide key={idx} className="h-auto">
-                  <div className="relative h-full">
-                    <Image src={p.image} alt={p.title} fill className="object-cover" />
-                    <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-black bg-opacity-30">
-                      <div className="font-medium text-white text-3xl">{p.title}</div>
-                      <p className="text-white">{p.desc}</p>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+              <Swiper
+                onSwiper={(swiper: ISwiper) => setFirstSwiper(swiper)}
+                spaceBetween={16}
+                className="!h-full !hidden md:!block"
+                loop
+                slidesPerView={1}
+              >
+                {firstSwiperProjects.map((p, idx) => (
+                  <SwiperSlide key={idx} className="h-auto">
+                    <div className="relative h-full">
+                      <Image src={p.image} alt={p.title} fill className="object-cover" />
+                      <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-opacity-30 bg-black">
+                        <div className="font-medium text-white text-3xl">{p.title}</div>
+                        <p className="text-white">{p.desc}</p>
+                      </div>
                     </div>
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+            <div className="min-w-[240px] hidden md:block aspect-square md:aspect-[none] basis-[calc(calc(100%-20px)/3)] flex-grow  rounded-[4px] overflow-hidden">
+              <Swiper
+                className="!h-full"
+                onSwiper={(swiper: ISwiper) => setSecondSwiper(swiper)}
+                spaceBetween={16}
+                loop
+                slidesPerView={1}
+              >
+                {secondSwiperProjects.map((p, idx) => (
+                  <SwiperSlide key={idx} className="h-auto">
+                    <div className="relative h-full">
+                      <Image src={p.image} alt={p.title} fill className="object-cover" />
+                      <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-black bg-opacity-30">
+                        <div className="font-medium text-white text-3xl">{p.title}</div>
+                        <p className="text-white">{p.desc}</p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
           </div>
         </div>
         <div className="flex gap-5 flex-wrap">
-          <div className="min-w-[240px] relative rounded-[4px] bg-dark-grey py-12 px-8 basis-[calc(calc(100%-40px)/3)] aspect-square flex-grow flex flex-col gap-28">
+          <div className="hidden lg:flex min-w-[240px] relative rounded-[4px] bg-dark-grey py-12 px-8 basis-[calc(calc(100%-40px)/3)] aspect-square flex-grow flex-col gap-28">
             <Image
               src={FemaleImg}
               alt="female merantau mandiri"
@@ -129,18 +153,19 @@ const Project = () => {
               className="object-cover"
             />
           </div>
-          <div className="min-w-[240px] basis-[calc(2*calc(100%-20px)/3)] flex-grow rounded-[4px] overflow-hidden flex items-center justify-center bg-yellow px-4 py-16 md:px-20">
+          <div className="min-w-[240px] basis-[calc(2*calc(100%-20px)/3)] flex-grow rounded-[4px] overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#f5cf6b] from-10% via-yellow to-[#f5cf6b] to-90% px-4 py-16 md:px-20">
             <div className="flex flex-col gap-8 items-center justify-center">
               <div className="flex flex-col gap-4 md:gap-8">
                 <div className="font-semibold text-2xl text-center md:hidden">
                   Memesan barang seperti mengirim uang dalam hitungan menit
                 </div>
                 <div className="font-semibold text-3xl text-center hidden md:block">
-                  Dapatkan layanan terbaik kami, <br />
-                  cukup melalui smartphone mu
+                  Dapatkan layanan terbaik kami, <br className="hidden xl:block" />
+                  cukup melalui <i>smartphone</i> mu
                 </div>
                 <p className="text-center hidden md:block">
-                  Percayakan segala keperluan anda ke Merantau Mandiri. <br />
+                  Percayakan segala keperluan anda ke Merantau Mandiri.{' '}
+                  <br className="hidden xl:block" />
                   Satu solusi untuk segala kebutuhan barang dan jasa.
                 </p>
                 <p className="text-center md:hidden text-sm">

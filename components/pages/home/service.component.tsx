@@ -4,6 +4,7 @@ import CsIc from '@/public/icons/cs.svg';
 import ProductIc from '@/public/icons/product.svg';
 import DeliveryIc from '@/public/icons/delivery.svg';
 import Image from 'next/image';
+import ServiceCard from '@/components/common/service-card/service-card.component';
 
 const SERVICES = [
   {
@@ -33,23 +34,8 @@ const Service = () => {
         <Button variant={Button.Variant.PrimaryOutlined}>Hubungi Kami</Button>
       </div>
       <div className="flex flex-wrap gap-6">
-        {SERVICES.map((svc) => (
-          <div
-            key={svc.title}
-            className="basis-[240px] flex-grow group rounded-lg py-28 px-6 flex flex-col gap-10 bg-dark-grey hover:bg-yellow"
-          >
-            <span className="w-[88px] h-[88px] inline-flex items-center justify-center bg-white/30 group-hover:bg-med-yellow rounded-xl backdrop-blur-sm">
-              <Image src={svc.icon} alt="icon" />
-            </span>
-            <div className="space-y-5">
-              <div className="font-bold text-white text-[26px] group-hover:text-black">
-                {svc.title}
-              </div>
-              <p className="font-medium text-white/50 group-hover:text-dark-yellow">
-                {svc.subtitle}
-              </p>
-            </div>
-          </div>
+        {SERVICES.map((svc, idx) => (
+          <ServiceCard svc={svc} key={idx} />
         ))}
       </div>
     </section>
