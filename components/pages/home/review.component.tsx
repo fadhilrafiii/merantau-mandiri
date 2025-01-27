@@ -6,8 +6,8 @@ import ReviewBg1 from '@/public/images/review-bg-1.png';
 import ReviewBg2 from '@/public/images/review-bg-2.png';
 import INAFlag from '@/public/icons/ina-flag.svg';
 import ReviewCard from '@/components/common/review-card/review-card.component';
-import NextIc from '@/public/icons/next-2.svg';
-import PrevIc from '@/public/icons/prev-2.svg';
+import NextIc from '@/public/icons/next.svg';
+import PrevIc from '@/public/icons/prev.svg';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import ISwiper from 'swiper';
@@ -54,22 +54,22 @@ const Review = () => {
     <section ref={ref} id="review" className="py-32 md:py-36 container space-y-12">
       <div className="flex items-center justify-between gap-4">
         <h3 className="text-white font-semibold text-[32px] md:text-[40px]">
-          Pesan <span className="hidden md:inline">hangat dari</span> mereka
+          Pesan hangat dari mereka
         </h3>
         <div className="inline-flex items-center gap-4">
           <button
+            className="rounded-[4px] bg-dark-grey w-11 h-11 flex items-center justify-center"
             onClick={() => swiper?.slidePrev()}
             disabled={!swiper?.allowSlidePrev}
-            className="disabled:cursor-[not-allowed]"
           >
-            <Image src={PrevIc} alt="prev" height={40} />
+            <Image src={PrevIc} alt="prev" height={16} />
           </button>
           <button
+            className="rounded-[4px] bg-dark-grey w-11 h-11 flex items-center justify-center"
             onClick={() => swiper?.slideNext()}
             disabled={!swiper?.allowSlideNext}
-            className="disabled:cursor-[not-allowed]"
           >
-            <Image src={NextIc} alt="next" height={40} />
+            <Image src={NextIc} alt="next" height={16} />
           </button>
         </div>
       </div>

@@ -57,7 +57,9 @@ const Project = () => {
 
   return (
     <section ref={ref} id="project" className="py-32 md:py-36 container space-y-12">
-      <h3 className="text-white font-semibold text-[32px] md:text-[40px]">Project</h3>
+      <h3 className="text-white font-semibold text-[32px] md:text-[40px]">
+        Project kita sebelumnya
+      </h3>
       <div className="flex flex-col gap-5">
         <div className="flex gap-5 flex-col lg:flex-row">
           <div className="min-w-[240px] aspect-square md:aspect-auto rounded-[4px] bg-dark-grey py-12 px-8 basis-[calc(calc(100%-20px)/3)] flex-grow flex flex-col gap-28">
@@ -93,7 +95,7 @@ const Project = () => {
                   <SwiperSlide key={idx} className="h-auto">
                     <div className="relative h-full">
                       <Image src={p.image} alt={p.title} fill className="object-cover" />
-                      <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-opacity-30 bg-black">
+                      <div className="h-full w-full justify-end absolute px-8 py-12 flex flex-col gap-2 bg-opacity-30 bg-black">
                         <div className="font-medium text-white text-3xl">{p.title}</div>
                         <p className="text-white">{p.desc}</p>
                       </div>
@@ -112,7 +114,7 @@ const Project = () => {
                   <SwiperSlide key={idx} className="h-auto">
                     <div className="relative h-full">
                       <Image src={p.image} alt={p.title} fill className="object-cover" />
-                      <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-opacity-30 bg-black">
+                      <div className="h-full w-full justify-end absolute px-8 py-12 flex flex-col gap-2 bg-opacity-30 bg-black">
                         <div className="font-medium text-white text-3xl">{p.title}</div>
                         <p className="text-white">{p.desc}</p>
                       </div>
@@ -133,7 +135,7 @@ const Project = () => {
                   <SwiperSlide key={idx} className="h-auto">
                     <div className="relative h-full">
                       <Image src={p.image} alt={p.title} fill className="object-cover" />
-                      <div className="h-full w-full absolute px-8 py-12 flex flex-col gap-4 bg-black bg-opacity-30">
+                      <div className="h-full w-full justify-end absolute px-8 py-12 flex flex-col gap-2 bg-black bg-opacity-30">
                         <div className="font-medium text-white text-3xl">{p.title}</div>
                         <p className="text-white">{p.desc}</p>
                       </div>
@@ -156,21 +158,13 @@ const Project = () => {
           <div className="min-w-[240px] basis-[calc(2*calc(100%-20px)/3)] flex-grow rounded-[4px] overflow-hidden flex items-center justify-center bg-gradient-to-br from-[#f5cf6b] from-10% via-yellow to-[#f5cf6b] to-90% px-4 py-16 md:px-20">
             <div className="flex flex-col gap-8 items-center justify-center">
               <div className="flex flex-col gap-4 md:gap-8">
-                <div className="font-semibold text-2xl text-center md:hidden">
-                  Memesan barang seperti mengirim uang dalam hitungan menit
-                </div>
-                <div className="font-semibold text-3xl text-center hidden md:block">
+                <div className="font-semibold text-2xl lg:text-3xl text-center">
                   Dapatkan layanan terbaik kami, <br className="hidden xl:block" />
                   cukup melalui <i>smartphone</i> mu
                 </div>
-                <p className="text-center hidden md:block">
-                  Percayakan segala keperluan anda ke Merantau Mandiri.{' '}
-                  <br className="hidden xl:block" />
-                  Satu solusi untuk segala kebutuhan barang dan jasa.
-                </p>
-                <p className="text-center md:hidden text-sm">
-                  memberdayakan keputusan logistik anda kepada merantau mandiri untuk
-                  barang dalam jumlah besar
+                <p className="text-sm md:text-base text-center">
+                  Percayakan segala keperluan anda ke Merantau Mandiri. Satu solusi untuk
+                  segala kebutuhan barang dan jasa.
                 </p>
               </div>
               <Button variant={Button.Variant.SecondaryFilled}>Hubungi kami</Button>

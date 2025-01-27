@@ -8,10 +8,10 @@ const WhoWeAre = () => {
         <div className="px-4 md:px-8 lg:px-16 basis-[240px] flex-grow flex flex-col justify-between gap-y-12 lg:gap-y-20">
           <div className="space-y-6 lg:space-y-10">
             <div className="font-medium text-white text-xl lg:text-3xl">
-              Akhirnya, cara baru untuk memesan kebutuhanmu telah hadir disini
+              Menghadirkan solusi terbaik dan tercepat untuk segala kebutuhanmu
             </div>
             <p className="lg:hidden text-grey">
-              Pilar utama dalam membuat logistic terbaik
+              Pilihan utama dalam layanan penyedia FMCG serta pengadaan barang dan jasa
             </p>
             <p className="hidden lg:block text-xl text-grey">
               Pilihan utama dalam layanan penyedia FMCG serta pengadaan barang dan jasa
@@ -28,17 +28,18 @@ const WhoWeAre = () => {
             </div>
             <div className="text-grey text-base lg:text-xl">
               Rating <span className="font-bold text-white">4.8/5</span> dari{' '}
-              <span className="font-bold text-white">600+</span> pesanan
+              <span className="font-bold text-white">600</span> review lebih
             </div>
           </div>
         </div>
         <div className="px-4 md:px-8 lg:px-16 basis-[240px] flex-grow">
           <p className="text-white lg:text-xl pb-8 lg:pb-16 border-b border-dashed border-grey !leading-[2]">
-            Mentau Mandiri berdiri tahun 2012 dan terus berinovasi hingga saat ini.
+            Merantau Mandiri berdiri tahun 2012 dan terus berinovasi hingga saat ini.
           </p>
           <p className="text-white lg:text-xl pt-8 lg:pt-16 !leading-[2]">
-            Salah satu <b>penyedia berbagai barang kebutuhan</b> dalam jumlah besar yang
-            mungkin sulit ditemukan di tempat lain dengan kelengkapan terjamin.
+            Penyedia berbagai barang kebutuhan dalam jumlah besar, termurah, dan termudah.{' '}
+            <br />
+            Punya kebutuhan lain? Kami juga menyediakan layanan pengadaan barang dan jasa.
           </p>
         </div>
       </div>

@@ -56,7 +56,7 @@ const OrderStep = () => {
                 <div className="text-[32px] font-semibold text-white !leading-6">
                   {st.title}
                 </div>
-                <p className="text-white font-medium">{st.subtitle}</p>
+                <p className="text-white/80 font-medium">{st.subtitle}</p>
               </div>
             </div>
           ))}

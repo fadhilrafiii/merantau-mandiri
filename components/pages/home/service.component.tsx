@@ -3,24 +3,26 @@ import Button from '@/components/common/button/button.component';
 import CsIc from '@/public/icons/cs.svg';
 import ProductIc from '@/public/icons/product.svg';
 import DeliveryIc from '@/public/icons/delivery.svg';
-import Image from 'next/image';
 import ServiceCard from '@/components/common/service-card/service-card.component';
 
 const SERVICES = [
   {
     icon: CsIc,
     title: 'Pengiriman',
-    subtitle: 'Butuh kirim barang? Kami bisa urus pengirimannya',
+    subtitle1: 'Butuh kirim barang?',
+    subtitle2: 'Kami urus pengirimannya',
   },
   {
     icon: ProductIc,
     title: 'Pengadaan Barang',
-    subtitle: 'Perlu stok dalam jumlah besar? Kami siap sediakan',
+    subtitle1: 'Perlu produk dalam jumlah besar?',
+    subtitle2: 'Siap kami sediakan',
   },
   {
     icon: DeliveryIc,
     title: 'Pengadaan Jasa',
-    subtitle: 'Coba bilang butuh jasa apa, nanti kita cari',
+    subtitle1: 'Cari jasa apapun?',
+    subtitle2: 'Konsultasikan dengan kami.',
   },
 ];
 

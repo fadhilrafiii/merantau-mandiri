@@ -17,7 +17,7 @@ const ProductCard = ({ product }: { product: Product }) => {
           className="flex-grow max-h-[220px] object-contain"
         />
       </div>
-      <div className="bg-med-grey text-white font-semibold px-4 py-3 text-center">
+      <div className="bg-med-grey text-white font-semibold p-4 text-center">
         {product.name}
       </div>
     </div>

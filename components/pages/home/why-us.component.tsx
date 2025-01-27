@@ -28,7 +28,7 @@ const WhyUs = () => {
     <section ref={ref} id="why-us" className="pt-32 md:pt-36">
       <div className="container flex flex-col gap-12 md:gap-24">
         <h3 className="text-white font-semibold text-[32px] md:text-[40px]">
-          Kenapa harus berbelanja melalui kami?
+          Kenapa harus belanja melalui kami?
         </h3>
         <div className="flex flex-col gap-5">
           <div className="flex flex-wrap -mx-[10px] gap-y-5">
@@ -45,7 +45,7 @@ const WhyUs = () => {
                   <div className="lg:text-[40px] text-white font-semibold text-xl">
                     Proses mudah dan cepat
                   </div>
-                  <div className="lg:text-xl text-base text-grey tracking-tight">
+                  <div className="lg:text-xl text-base text-grey !leading-[28px]">
                     Pemesanan yang mudah dan praktis, hanya melalui ponsel anda. Kapanpun,
                     dimanapun.
                   </div>
@@ -87,7 +87,7 @@ const WhyUs = () => {
                   <div className="lg:text-[40px] text-white font-semibold text-xl">
                     Terpercaya menjadi mitra anda{' '}
                   </div>
-                  <div className="lg:text-xl text-base text-grey tracking-tight">
+                  <div className="lg:text-xl text-base text-grey !leading-[28px]">
                     Menjaga kepercayaan pengguna adalah kunci sukses kami dalam
                     menjalankan bisnis.
                   </div>
@@ -109,7 +109,7 @@ const WhyUs = () => {
                   <div className="lg:text-[40px] text-white font-semibold text-xl">
                     Garansi produk berkualitas{' '}
                   </div>
-                  <div className="lg:text-xl text-base text-grey tracking-tight">
+                  <div className="lg:text-xl text-base text-grey !leading-[28px]">
                     Jaminan produk terbaik sampai ke tangan anda. Seluruh barang melalui
                     quality control sebelum pengiriman.
                   </div>
