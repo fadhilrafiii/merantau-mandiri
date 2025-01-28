@@ -32,12 +32,12 @@ const ServiceCard = ({ svc }: IProps) => {
         >
           {svc.title}
         </div>
-        <p
+        <div
           className={`font-medium text-white/50 group-hover:lg:!text-dark-yellow ${inView && '!text-dark-yellow lg:!text-white/50'}`}
         >
           <p>{svc.subtitle1}</p>
           <p>{svc.subtitle2}</p>
-        </p>
+        </div>
       </div>
     </div>
   );

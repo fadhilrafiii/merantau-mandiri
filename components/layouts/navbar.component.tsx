@@ -39,8 +39,6 @@ const Navbar = () => {
     setWindowHeight(window.innerHeight);
   }, [showMobileMenu]);
 
-  console.log(isScrolling);
-
   return (
     <header
       className={`fixed z-50 w-full transition-all ${scroll > windowHeight && 'bg-dark bg-opacity-80'} ${isScrolling ? '!invisible opacity-0' : '!visible opacity-100'}`}

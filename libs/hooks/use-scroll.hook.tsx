@@ -8,7 +8,6 @@ const useScroll = () => {
   useEffect(() => {
     const handleScroll = () => {
       debounce(() => {
-        console.log('scrolling right now');
         if (!isScrolling) setIsScrolling(true);
       })();
       setScroll(window.scrollY);

@@ -4,6 +4,8 @@ import CsIc from '@/public/icons/cs.svg';
 import ProductIc from '@/public/icons/product.svg';
 import DeliveryIc from '@/public/icons/delivery.svg';
 import ServiceCard from '@/components/common/service-card/service-card.component';
+import Link from 'next/link';
+import { WA_ADMIN } from '@/libs/constants/contact.constant';
 
 const SERVICES = [
   {
@@ -33,7 +35,9 @@ const Service = () => {
         <h3 className="text-white font-semibold text-[32px] md:text-[40px]">
           Jasa <span className="hidden md:inline">yang kami tawarkan</span>
         </h3>
-        <Button variant={Button.Variant.PrimaryOutlined}>Hubungi Kami</Button>
+        <Link href={`https://wa.me/${WA_ADMIN}`}>
+          <Button variant={Button.Variant.PrimaryOutlined}>Hubungi Kami</Button>
+        </Link>
       </div>
       <div className="flex flex-wrap gap-6">
         {SERVICES.map((svc, idx) => (
