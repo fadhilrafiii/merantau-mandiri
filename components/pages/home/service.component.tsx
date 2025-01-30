@@ -33,7 +33,7 @@ const Service = () => {
     <section id="service" className="pt-32 md:pt-36 container space-y-12">
       <div className="flex items-center justify-between">
         <h3 className="text-white font-semibold text-[32px] md:text-[40px]">
-          Jasa <span className="hidden md:inline">yang kami tawarkan</span>
+          Jasa yang kami tawarkan
         </h3>
         <Link href={`https://wa.me/${WA_ADMIN}`}>
           <Button variant={Button.Variant.PrimaryOutlined}>Hubungi Kami</Button>

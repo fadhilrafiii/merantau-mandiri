@@ -1,5 +1,6 @@
 import Logo from '@/public/images/logo.png';
 import Wa from '@/public/icons/wa.svg';
+import Phone from '@/public/icons/phone.svg';
 import Image from 'next/image';
 import Button from '../common/button/button.component';
 import Link from 'next/link';
@@ -28,7 +29,7 @@ const Footer = () => {
               variant={Button.Variant.PrimaryOutlined}
               className="flex flex-grow items-center !text-white gap-2 text-sm"
             >
-              <Image src={Wa} width={16} alt="WA" />
+              <Image src={Phone} width={16} alt="WA" />
               {FAX_ADMIN}
             </Button>
           </Link>

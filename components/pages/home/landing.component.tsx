@@ -1,6 +1,8 @@
 import Button from '@/components/common/button/button.component';
+import { WA_ADMIN } from '@/libs/constants/contact.constant';
 import LandingImg from '@/public/images/landing.webp';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
@@ -46,7 +48,9 @@ const Landing = () => {
           </p>
         </div>
         <div className="container">
-          <Button variant={Button.Variant.PrimaryFilled}>Hubungi Kami</Button>
+          <Link href={`https://wa.me/${WA_ADMIN}`}>
+            <Button variant={Button.Variant.PrimaryFilled}>Hubungi Kami</Button>
+          </Link>
         </div>
       </div>
     </section>
