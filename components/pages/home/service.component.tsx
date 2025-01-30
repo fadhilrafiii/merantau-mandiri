@@ -35,7 +35,7 @@ const Service = () => {
         <h3 className="text-white font-semibold text-[32px] md:text-[40px]">
           Jasa yang kami tawarkan
         </h3>
-        <Link href={`https://wa.me/${WA_ADMIN}`}>
+        <Link href={`https://wa.me/${WA_ADMIN}`} target="_blank">
           <Button variant={Button.Variant.PrimaryOutlined}>Hubungi Kami</Button>
         </Link>
       </div>

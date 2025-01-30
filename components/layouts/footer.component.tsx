@@ -15,7 +15,7 @@ const Footer = () => {
         <Image src={Logo} width={94} alt="Merantau Mandiri" />
         <div className="font-medium text-white">info@merantaumandiri.com</div>
         <div className="flex md:flex-col gap-4">
-          <Link href={`https://wa.me/${WA_ADMIN}`}>
+          <Link href={`https://wa.me/${WA_ADMIN}`} target="_blank">
             <Button
               variant={Button.Variant.PrimaryOutlined}
               className="flex flex-grow items-center !text-white gap-2 text-sm"
@@ -24,7 +24,7 @@ const Footer = () => {
               {WA_ADMIN.replace(/62/, '0')}
             </Button>
           </Link>
-          <Link href={`tel:${hrefTel}`}>
+          <Link href={`tel:${hrefTel}`} target="_blank">
             <Button
               variant={Button.Variant.PrimaryOutlined}
               className="flex flex-grow items-center !text-white gap-2 text-sm"

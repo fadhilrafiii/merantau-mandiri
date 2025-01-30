@@ -48,7 +48,7 @@ const Landing = () => {
           </p>
         </div>
         <div className="container">
-          <Link href={`https://wa.me/${WA_ADMIN}`}>
+          <Link href={`https://wa.me/${WA_ADMIN}`} target="_blank">
             <Button variant={Button.Variant.PrimaryFilled}>Hubungi Kami</Button>
           </Link>
         </div>
