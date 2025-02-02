@@ -8,24 +8,24 @@ import { useInView } from 'react-intersection-observer';
 
 const FAQS = [
   {
-    question: 'Berapa lama biasanya pengiriman?',
+    question: 'Bagaimana jika saya butuh produk yang tidak ada di list penawaran?',
     answer:
-      'MHM menggunakan pengiriman internal perusahaan yang memungkinkan kamu tidak perlu khawatir dengan keamanan dalam perjalanan :)',
+      'Jangan khawatir, konsultasikan saja dengan tim kami. Kami berkomitmen untuk memberikan pelayanan terbaik dalam memenuhi segala kebutuhan anda.',
   },
   {
-    question: 'Pengiriman menggunakan ekspedisi apa?',
+    question: 'Apakah ada jumlah minimal dalam pemesanan produk?',
     answer:
-      'MHM menggunakan pengiriman internal perusahaan yang memungkinkan kamu tidak perlu khawatir dengan keamanan dalam perjalanan :)',
+      'Jumlah minimum pemesanan bergantung pada produk yang dibeli dan lokasi pengiriman. Hubungi kami untuk mendapatkan info lebih lanjut.',
   },
   {
-    question: 'MHM melayani jasa hingga hari apa?',
+    question: 'Berapa lama proses pengiriman produk?',
     answer:
-      'MHM menggunakan pengiriman internal perusahaan yang memungkinkan kamu tidak perlu khawatir dengan keamanan dalam perjalanan :)',
+      'Durasi pengiriman bergantung pada lokasi pembeli dan jumlah produk yang dikirim. Jangan khawatir, kami selalu memberikan produk terbaik dalam waktu tercepat.',
   },
   {
-    question: 'Menerima pengadaan jumlah besar?',
+    question: 'Apakah kualitas produk terjamin?',
     answer:
-      'MHM menggunakan pengiriman internal perusahaan yang memungkinkan kamu tidak perlu khawatir dengan keamanan dalam perjalanan :)',
+      'Seluruh produk Merantau Mandiri telah melalui proses kontrol yang ketat untuk menjamin kualitas. Apabila anda menerima produk yang bermasalah, segera hubungi tim kami.',
   },
   {
     question: 'Kemana saya harus menghubungi MHM?',
@@ -33,9 +33,13 @@ const FAQS = [
       'MHM menggunakan pengiriman internal perusahaan yang memungkinkan kamu tidak perlu khawatir dengan keamanan dalam perjalanan :)',
   },
   {
-    question: 'Apakah ada tingkatan harga pemesanan?',
+    question: 'Apakah Merantau Mandiri melayani pengiriman secara rutin?',
+    answer: 'Tentu saja, kami selalu siap untuk memenuhi segala kebutuhan anda.',
+  },
+  {
+    question: 'Bagaimana cara bergabung menjadi mitra Merantau Mandiri?',
     answer:
-      'MHM menggunakan pengiriman internal perusahaan yang memungkinkan kamu tidak perlu khawatir dengan keamanan dalam perjalanan :)',
+      'Apabila anda berminat menjadi mitra penyedia produk atau pengiriman, jangan ragu untuk menghubungi tim kami.',
   },
 ];
 
